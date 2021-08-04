@@ -1,4 +1,6 @@
+import 'package:aplikasi_travel/pages/bonus_page.dart';
 import 'package:aplikasi_travel/pages/get_started_page.dart';
+import 'package:aplikasi_travel/pages/main_page.dart';
 import 'package:aplikasi_travel/pages/sign_up_pages.dart';
 import 'package:aplikasi_travel/pages/splash_page.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +18,8 @@ class MyApp extends StatelessWidget {
         '/': (context) => SplashPage(),
         '/get-started': (context) => GetStartedPage(),
         '/sign-up': (context) => SignUpPage(),
+        '/bonus': (context) => BonusPage(),
+        '/main': (context) => MainPage(),
       },
     );
   }

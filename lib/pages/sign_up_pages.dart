@@ -151,7 +151,7 @@ class SignUpPage extends StatelessWidget {
         );
       }
 
-      Widget inputButton() {
+      Widget getStartedButton() {
         return Container(
           height: 55,
           width: double.infinity,
@@ -165,7 +165,9 @@ class SignUpPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(defaultRadius),
               ),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/bonus');
+            },
             child: Text(
               'Get Started',
               style: whiteTextStyle.copyWith(
@@ -196,22 +198,22 @@ class SignUpPage extends StatelessWidget {
             emailInput(),
             passwordInput(),
             hobbyInput(),
-            inputButton(),
+            getStartedButton(),
           ],
         ),
       );
     }
 
     Widget termText() {
-      return Center(
-        child: Container(
-          margin: EdgeInsets.only(bottom: 70),
-          child: Text(
-            'Terms and Conditions',
-            style: greyTextStyle.copyWith(
-              fontSize: 16,
-              fontWeight: light,
-            ),
+      return Container(
+        alignment: Alignment.center,
+        margin: EdgeInsets.only(bottom: 70),
+        child: Text(
+          'Terms and Conditions',
+          style: greyTextStyle.copyWith(
+            fontSize: 16,
+            fontWeight: light,
+            decoration: TextDecoration.underline,
           ),
         ),
       );
