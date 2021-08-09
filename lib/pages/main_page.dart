@@ -1,4 +1,5 @@
 import 'package:aplikasi_travel/shared/theme.dart';
+import 'package:aplikasi_travel/widgets.dart/button_navigation_bar_item.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatelessWidget {
@@ -25,106 +26,13 @@ class MainPage extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  SizedBox(),
-                  Container(
-                    width: 24,
-                    height: 24,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/fi_globe.png',
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 30,
-                    height: 2,
-                    decoration: BoxDecoration(
-                      color: purpleColor,
-                      borderRadius: BorderRadius.circular(18),
-                    ),
-                  ),
-                ],
+              ButtonNavigationBarItem(
+                imageUrl: 'assets/fi_globe.png',
+                isSelected: true,
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  SizedBox(),
-                  Container(
-                    width: 24,
-                    height: 24,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/fi_book-open.png',
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 30,
-                    height: 2,
-                    decoration: BoxDecoration(
-                      color: transparentColor,
-                      borderRadius: BorderRadius.circular(18),
-                    ),
-                  ),
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  SizedBox(),
-                  Container(
-                    width: 24,
-                    height: 24,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/fi_credit-card.png',
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 30,
-                    height: 2,
-                    decoration: BoxDecoration(
-                      color: transparentColor,
-                      borderRadius: BorderRadius.circular(18),
-                    ),
-                  ),
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  SizedBox(),
-                  Container(
-                    width: 24,
-                    height: 24,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/fi_settings.png',
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 30,
-                    height: 2,
-                    decoration: BoxDecoration(
-                      color: transparentColor,
-                      borderRadius: BorderRadius.circular(18),
-                    ),
-                  ),
-                ],
-              ),
+              ButtonNavigationBarItem(imageUrl: 'assets/fi_credit-card.png'),
+              ButtonNavigationBarItem(imageUrl: 'assets/fi_book-open.png'),
+              ButtonNavigationBarItem(imageUrl: 'assets/fi_settings.png'),
             ],
           ),
         ),
